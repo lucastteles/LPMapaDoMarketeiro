@@ -1,0 +1,346 @@
+/* <section class="apresentacao"> */
+section.ebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-escuro) ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 60px 190px 60px;
+}
+section.ebook img.divisor {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  rotate: 180deg;
+  filter: drop-shadow(5px 30px 8px rgb(19, 19, 19));
+  animation: shadowAnimation 4s infinite ease-in-out alternate; 
+}
+@keyframes shadowAnimation {
+  0% {
+    filter: drop-shadow(5px 15px 8px rgb(19, 19, 19));
+  }
+  25% {
+    filter: drop-shadow(7px 20px 8px rgba(19, 19, 19, 0.8));
+  }
+  50% {
+    filter: drop-shadow(9px 25px 8px rgba(19, 19, 19, 0.9));
+  }
+  75% {
+    filter: drop-shadow(7px 30px 8px rgba(19, 19, 19, 0.8));
+  }
+  100% {
+    filter: drop-shadow(5px 40px 8px rgb(19, 19, 19));
+  }
+}
+section.ebook .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+section.ebook .imagem img.principal {
+  width: 100%;
+  max-width: 450px;
+  z-index: 2;
+}
+section.ebook img.principal {
+  width: 100%;
+  max-width: 50%;
+  padding: 40px 0 0 0;
+}
+section.ebook .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 60px 60px 60px;
+  width: 50%;
+}
+.circulo {
+  position: absolute;
+  transform: rotate(40deg);
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: dashed 5px #F30505 ;
+  border-left: dashed 4px #F30505 ;
+}
+@keyframes circulovermelho {
+  0% {
+    transform: rotate(0deg); 
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.circulo.um {
+  animation: circulovermelho 55s ease-in-out infinite;
+  left: 14%;
+  top: 10%;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.login-form h2 {
+font-weight: bold;
+margin: 20px 0 0 0;
+text-align: start;
+font-family: var(--bold);
+font-size: var(--f6);
+color: var(--cor-branco);
+line-height: 1.1;
+width: 100%;
+text-transform: uppercase;
+}
+.login-form h2 span{
+  color: var(--cor-vermelho);
+}
+.login-form p {
+  font-size: 1rem;
+  color: #555;
+  text-align: start;
+  margin-bottom: 20px;
+  font-family: var(--light);
+  color: var(--cor-branco);
+  line-height: 1.2;
+  margin: 10px 0 10px 0px;
+  max-width: 450px;
+}
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  width: 100%;
+  }
+  .coolinput label.text {
+  color: var(--cor-branco);
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 10px;
+  padding: 0 3px;
+  width: fit-content;
+  z-index: 999;
+  font-family: var(--light);
+  font-size: var(--f2);
+  }
+  .coolinput input[type=email],
+  .coolinput input[type=text],
+  .coolinput input[type=tel] 
+    {
+    padding: 15px 19px 20px 45px;
+    border: 1px #383839 solid;
+    border-radius: 5px;
+    background: #131314;
+    width: 100%;
+    color: #fff;
+    font-family: var(--light);
+    font-size: var(--f2);
+  }
+  .coolinput input[type=text].input:focus {
+  outline: none;
+  }
+  .input-container i img {
+  width: 22px;
+  }
+  .input-container {
+    position: relative;
+  }
+  .coolinput .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #9CA1BA; 
+  font-size: 20px;
+  }
+button{
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-vermelho);
+  padding: 10px 25px 10px 10px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  text-align: center;
+  justify-content: center;
+}
+.button-login{
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+button:hover {
+  filter: brightness(110%);
+}
+button h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  text-transform: uppercase;
+}
+button .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+button .icone img {
+  width: 100%;
+  max-width: 25px;
+}
+/* Estilos para a mensagem de sucesso */
+.mensagem {
+  display: none;
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%,0);
+  background-color: var(--cor-branco);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  z-index: 999;
+}
+.mensagem h3{
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: #01a42a;
+}
+.mensagem p{
+  font-family: var();
+  font-size: var(--f2);
+  color: var(--cor-preto);
+}
+/* Estilos para a mensagem de sucesso */
+.mensagem.sucesso {
+  background-color: var(--cor-branco);
+  color: white;
+}
+/* Estilos para a mensagem de erro */
+.mensagem.erro {
+  background-color: #f44336;
+  color: white;
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.ebook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 30px 30px 100px;
+  }
+  section.ebook .titulo {
+    align-items: center;
+    text-align: center;
+    padding: 30px 30px 40px 30px;
+    width: 100%;
+  }
+  section.ebook .titulo h1 {
+    font-size: var(--f5);
+    max-width: 400px;
+  }
+  section.ebook .titulo p {
+    font-size: var(--f3);
+    max-width: 550px;
+    width: 100%;
+  }
+  section.ebook .titulo button {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+  }
+  section.ebook .titulo button h3 {
+    font-size: var(--f3);
+  }
+  section.ebook .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+  }
+  section.ebook .imagem img.principal {
+    max-width: 300px;
+    width: 300px;
+  }
+
+  section.ebook img.divisor{
+    width: 150%;
+  }
+  .login-form h2 {
+    font-size: var(--f5);
+  }
+  .login-form p {
+    font-size: clamp(1rem, 1vw, 3.5rem);
+  }
+  .button-login {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+}
+ button h3 {
+  font-size: var(--f2);
+}
+.circulo.um {
+  left: 14%;
+  top: 12%;
+  max-height: 300px;
+  max-width: 300px;
+  min-width: 300px;
+}
+.circulo {
+  position: absolute;
+  transform: rotate(40deg);
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: dashed 5px #F30505;
+  border-left: dashed 4px #F30505;
+  margin-left: -90px;
+}
+.login-container {
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0;
+  height: unset;
+}
+  .login-image {
+    width: 105%;
+}        
+.login-form {
+padding: 20px;
+flex: 1;
+min-width: 100%;
+min-height: unset;
+max-height: unset;
+padding: 0px;  
+}
+  .mensagem {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,177 @@
+/* 
+<nav> 
+*/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+nav .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--cor-branco);
+  padding: 0 60px;
+  z-index: 10;
+}
+nav .conteudo img.logo {
+  width: 100%;
+  max-width: 55px;
+}
+nav .conteudo .opcoes {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .conteudo .opcoes button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 0 0 20px;
+  transition: all 0.3s;
+}
+nav .conteudo .opcoes button:hover {
+  opacity: 0.5;
+}
+nav .conteudo .opcoes button p {
+  font-family: var(--bold);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+}
+nav .conteudo .opcoes button img.icone {
+  width: 15px;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+nav .conteudo .opcoes button img.setinha {
+  width: 12px;
+  max-width: 12px;
+  margin: 0 0 0 10px;
+}
+nav .conteudo .opcoes button.entrar {
+  margin-left: auto;
+}
+nav .conteudo .opcoes button.hospedar {
+  background-color: var(--cor-musgo);
+  padding: 13px 20px;
+  border-radius: 50px;
+}
+nav .conteudo .opcoes button.hospedar:hover {
+  background-color: var(--cor-verde);
+  opacity: 1;
+}
+nav .conteudo .opcoes button.hospedar p {
+  font-family: var(--semibold);
+  color: var(--cor-branco);
+}
+nav .conteudo button.menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  position: relative;
+}
+nav .conteudo button.menu span {
+  position: absolute;
+  background-color: var(--cor-preto);
+  right: 0;
+  transition: all 0.3s;
+}
+nav .conteudo button.menu span.um {
+  width: 35px;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+}
+nav .conteudo button.menu span.dois {
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  bottom: 10px;
+}
+nav .conteudo button.menu.ativo span {
+  background-color: var(--cor-vermelho);
+}
+nav .conteudo button.menu.ativo span.um {
+  transform: rotate(45deg);
+  top: 15px;
+}
+nav .conteudo button.menu.ativo span.dois {
+  transform: rotate(-45deg);
+  bottom: 15px;
+  width: 35px;
+}
+nav.scroll .conteudo {
+  background-color: #ffffff50;
+  border: 1px solid #ffffff36;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+nav.scroll .conteudo .opcoes button p {
+    color: var(--cor-branco);
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  nav .conteudo {
+    height: 60px;
+    padding: 0 30px;
+  }
+  nav .conteudo img.logo {
+    width: 100%;
+    max-width: 55px;
+}
+  nav .conteudo .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    height: calc(100dvh - 60px);
+    top: 59px;
+    left: 100dvw;
+    background-color: var(--cor-branco);
+    padding: 0 30px 30px 30px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+    transition: all 0.5s;
+  }
+  nav .conteudo .opcoes.mostrar {
+    pointer-events: all;
+    left: 0;
+  }
+  nav .conteudo .opcoes button {
+    margin: 30px 0 0 0;
+  }
+  nav .conteudo .opcoes button p {
+    font-size: var(--f2);
+  }
+  nav .conteudo .opcoes button img.icone {
+    width: 18px;
+    max-width: 18px;
+  }
+  nav .conteudo .opcoes button.entrar {
+    margin-left: 0;
+  }
+  nav .conteudo .opcoes button.hospedar {
+    padding: 16px 20px;
+  }
+  nav .conteudo button.menu {
+    display: flex;
+  }
+  nav.scroll .conteudo .opcoes button p {
+    color: var(--cor-preto);
+}
+}

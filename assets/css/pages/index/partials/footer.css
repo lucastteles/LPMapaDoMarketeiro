@@ -1,0 +1,161 @@
+/* 
+<footer> 
+*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 60px;
+  background-color: var(--cor-escuro-1);
+  background-image: url('/assets/files/images/imagemdefundoTOPOMDM.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; 
+}
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+}
+footer .copyright img {
+  width: 100%;
+  max-width: 200px;
+}
+footer .copyright h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  margin: 30px 0 5px 0;
+}
+footer .copyright p {
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  width: 100%;
+  max-width: 300px;
+}
+footer .copyright .divisoria {
+  width: 150px;
+  height: 1px;
+  background-color: #00000063;
+  margin: 20px 0 30px 0;
+}
+footer .copyright h4 {
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  color: var(--cor-preto);
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+footer .links h2 {
+  font-family: var(--bold);
+  font-size: var(--f5);
+  color: var(--cor-preto);
+  line-height: 1.1;
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+}
+footer .links h2 span {
+  color: var(--cor-vermelho);
+}
+footer .links .partes {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 450px;
+}
+footer .links .partes .parte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 55%;
+}
+footer .links .partes .parte a {
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+footer .links .partes .parte a:hover {
+  color: var(--cor-vermelho);
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+footer .redes h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  margin: 0 0 15px 0;
+}
+footer .redes .botoes {
+  display: flex;
+  align-items: center;
+}
+footer .redes .botoes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ffffff38;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+footer .redes .botoes a:hover {
+  background-color: #8f00006d;
+}
+footer .redes .botoes a img {
+  width: 100%;
+  max-width: 25px;
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+    padding: 50px 30px 80px 30px;
+  }
+  footer .copyright {
+    width: 100%;
+  }
+  footer .copyright img {
+    max-width: 150px;
+  }
+  footer .copyright p {
+    font-size: var(--f2);
+  }
+  footer .copyright .linha {
+    width: 180px;
+  }
+  footer .links {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+  footer .links .partes .parte a {
+    font-size: var(--f2);
+  }
+  footer .redes {
+    align-items: flex-start;
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+  footer .redes h3 {
+    font-family: var(--semibold);
+  }
+}

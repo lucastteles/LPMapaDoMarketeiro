@@ -1,0 +1,171 @@
+/* 
+<section class="planos"> 
+*/
+section.obstaculo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--cor-preto);
+  max-height: 185vh;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 60px 60px 60px;
+}
+section.obstaculo img.divisor {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  animation: shadowAnimation 4s infinite ease-in-out alternate;
+}
+section.obstaculo img.divisor2 {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  rotate: 180deg;
+  filter: drop-shadow(5px 30px 8px rgb(19, 19, 19));
+  animation: shadowAnimation 4s infinite ease-in-out alternate; 
+}
+@keyframes shadowAnimation {
+  0% {
+    filter: drop-shadow(5px 15px 8px rgb(19, 19, 19));
+  }
+  25% {
+    filter: drop-shadow(7px 20px 8px rgba(19, 19, 19, 0.8));
+  }
+  50% {
+    filter: drop-shadow(9px 25px 8px rgba(19, 19, 19, 0.9));
+  }
+  75% {
+    filter: drop-shadow(7px 30px 8px rgba(19, 19, 19, 0.8));
+  }
+  100% {
+    filter: drop-shadow(5px 40px 8px rgb(19, 19, 19));
+  }
+}
+section.obstaculo .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 0 70px 0;
+}
+section.obstaculo .titulo h2 {
+  color: var(--cor-branco);
+  line-height: 1.1;
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  margin-top: 150px;
+}
+section.obstaculo .titulo h2 .marketing {
+  color: var(--cor-vermelho);
+}
+section.obstaculo .titulo h2 .falta {
+  color: #BCBCBC;
+  font-size: clamp(1rem, 1vw, 3.5rem);
+}
+section.obstaculo .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  position: relative;
+}
+section.obstaculo .imagem img.principal {
+  width: 100%;
+  z-index: 2;
+}
+
+section.obstaculo .descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1150px;
+  padding: 10px 0 70px 0;
+}
+section.obstaculo .descricao p {
+  color: var(--cor-branco);
+  line-height: 1;
+  font-size: clamp(1.5rem, 1vw, 3.5rem);
+  font-family: var(--light);
+  padding: 35px 0 0px 0;
+}
+section.obstaculo .descricao p span {
+  text-decoration: underline 7px #8F0000;
+}
+section.obstaculo .subtitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 0 70px 0;
+}
+section.obstaculo .subtitulo h2 {
+  color: var(--cor-branco);
+  line-height: 1;
+  font-size: clamp(2rem, 1vw, 3.5rem);
+  font-family: var(--bold);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+section.obstaculo .subtitulo h2 span {
+    background-color: var(--cor-vermelho);
+    padding: 2px;
+    border-radius: 2px;
+    color: #fff;
+    font-family: var(--bold);
+}
+
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.obstaculo {
+    padding: 0px 30px 30px 30px;
+  }
+  section.obstaculo .titulo {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 0 50px 0;
+  }
+  section.obstaculo .titulo h2 {
+    font-size: var(--f5);
+    width: 100%;
+    max-width: 500px;
+  }
+  section.obstaculo .imagem {
+    width: 100%;
+  }
+  section.obstaculo .descricao p {
+    font-size: clamp(1rem, 1vw, 3.5rem);
+  }
+  section.obstaculo .subtitulo h2 {
+    color: var(--cor-branco);
+    line-height: 1;
+    font-size: var(--f5);
+    font-family: var(--bold);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  section.obstaculo .imagem img.principal {
+     min-width: 300px;
+     height: 150px;
+  }
+}

@@ -1,0 +1,24 @@
+/* Fontes */
+@font-face {
+  font-family: 'Gilroy-bold';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../files/fonts/Gilroy-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../files/fonts/Gilroy-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../files/fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
+

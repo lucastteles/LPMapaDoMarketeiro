@@ -1,0 +1,13 @@
+/* Global */
+@import '../../global/global.css';
+
+/* Partials */
+@import './partials/nav.css';
+@import './partials/section-apresentacao.css';
+@import './partials/section-metodo.css';
+@import './partials/section-obstaculo.css';
+@import './partials/section-servicos.css';
+@import './partials/section-depoimentos.css';
+@import './partials/section-renan.css';
+@import './partials/section-ebook.css';
+@import './partials/footer.css';

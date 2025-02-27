@@ -1,0 +1,599 @@
+/* 
+<section class="servicos"> 
+*/
+section.servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  background-color: #070606;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 60px 60px 60px;
+}
+section.servicos img.divisor {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  filter: drop-shadow(5px 30px 8px rgb(19, 19, 19));
+  animation: shadowAnimation 4s infinite ease-in-out alternate; 
+
+}
+@keyframes shadowAnimation {
+  0% {
+    filter: drop-shadow(5px 15px 8px rgb(19, 19, 19));
+  }
+  25% {
+    filter: drop-shadow(7px 20px 8px rgba(19, 19, 19, 0.8));
+  }
+  50% {
+    filter: drop-shadow(9px 25px 8px rgba(19, 19, 19, 0.9));
+  }
+  75% {
+    filter: drop-shadow(7px 30px 8px rgba(19, 19, 19, 0.8));
+  }
+  100% {
+    filter: drop-shadow(5px 40px 8px rgb(19, 19, 19));
+  }
+}
+section.servicos .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 0 70px 0;
+}
+section.servicos .titulo h1{
+color: var(--cor-branco);
+line-height: 1.1;
+font-size: clamp(2rem, 1vw, 3.5rem);
+text-transform: uppercase;
+margin-top: 90px;
+font-family: var(--bold);
+} 
+section.servicos .titulo h1 span{
+  color: var(--cor-vermelho);
+}
+section.servicos .seletor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -25px;
+  z-index: 4;
+}
+section.servicos .seletor h3 {
+  font-family: var(--semibold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  margin: 0 0 15px 0;
+}
+section.servicos .seletor .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 640px;
+  height: 120px;
+  border-radius: 20px;
+  background-color: var(--cor-preto);
+  border: 2px solid #292B2C;
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.6s;
+  margin-bottom: 25px;
+}
+section.servicos .seletor .toggle:hover {
+  background-color: var(--cor-escuro);
+}
+section.servicos .seletor .toggle .parte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+  position: relative;
+}
+section.servicos .seletor .toggle .parte::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Inicialmente escondido */
+  height: 7px; /* Altura da barra */
+  border-radius: 2px;
+  background: linear-gradient(to right, #8F0000, #410101);
+  transition: width 0.6s ease-in-out; /* Animação suave */
+}
+section.servicos .seletor .toggle .parte.ativo::after {
+  width: 100%; /* Expande a barra totalmente */
+}
+section.servicos .seletor .toggle .parte p {
+  font-family: var(--semibold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  max-width: 145px;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+section.servicos .seletor .toggle .parte img {
+  width: 100%;
+  max-width: 30px;
+  margin: 0 10px 0 0;
+}
+
+
+section.servicos .mundo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 95%;
+  background-color: #CFB48D;
+  border-radius: 10px;
+  min-height: 620px;
+  margin: 20px 0 0 0;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.305);
+  border: solid 2px var(--cor-vermelho);
+}
+section.servicos .mundo .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 40px 0 40px;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(180deg, #00000095, #000000be);
+  background: -webkit-linear-gradient(180deg, #000000be, #00000095);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.6s;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+section.servicos .mundo .texto.eua {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+section.servicos .mundo .texto.analista {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+section.servicos .mundo.ativo .texto.brasil {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+section.servicos .mundo.ativo .texto.eua {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+section.servicos .mundo.ativo .texto.analista {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+section.servicos .mundo .texto h2 {
+  font-family: var(--bold);
+  font-size: var(--f5);
+  color: var(--cor-branco);
+  width: 100%;
+  text-transform: uppercase;
+}
+section.servicos .mundo .texto.brasil h2 span {
+  color: var(--cor-ciano);
+}
+section.servicos .mundo .texto.eua h2 span {
+  color: var(--cor-vermelho);
+}
+section.servicos .mundo .texto p {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 10px 0 0 0;
+}
+
+section.servicos .mundo .texto p span {
+  background-color: var(--cor-vermelho);
+  padding: 2px;
+  border-radius: 2px;
+  color: #fff;
+  font-family: var(--bold);
+  white-space: nowrap;
+}
+
+/*********/
+section.servicos .texto button {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-vermelho);
+  padding: 10px 25px 10px 10px;
+  border-radius: 12px;
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+section.servicos .texto button:hover {
+  filter: brightness(110%);
+}
+section.servicos .texto button h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  text-transform: uppercase;
+}
+section.servicos .texto button .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-branco);
+  margin: 0 10px 0 0;
+}
+section.servicos .texto button .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+
+section.servicos .mundo .texto .itens {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  text-align: start;
+  width: 100%;
+}
+section.servicos .mundo .texto .item {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+  width: 50%;
+  box-sizing: border-box;
+}
+section.servicos .mundo .texto .item img {
+  width: 100%;
+  max-width: 65px;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+}
+
+section.servicos .mundo .texto .item h3 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  line-height: 1.2;
+  margin: 0;
+}
+
+section.servicos .mundo .texto .item h3 span{
+  font-family: var(--bold);
+
+}
+
+section.servicos .mundo img.mapa {
+  position: absolute;
+  z-index: 1;
+  width: 1300px;
+  min-width: 1900px;
+  bottom: -100px;
+  left: -450px;
+  transition: all 0.6s;
+  animation: mapaServidores 3s linear infinite;
+}
+@keyframes mapaServidores {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+section.servicos .mundo.ativo img.mapa {
+  width: 1500px;
+  min-width: 1500px;
+  bottom: 0;
+  left: -150px;
+}
+section.servicos .mundo img.caminhos {
+  position: absolute;
+  z-index: 2;
+  transition: all 0.6s;
+}
+section.servicos .mundo.ativo img.caminhos.eua {
+  opacity: 1;
+  visibility: visible;
+}
+section.servicos .mundo.ativo img.caminhos.brasil {
+  opacity: 0;
+  visibility: hidden;
+}
+section.servicos .mundo img.caminhos.brasil {
+  width: 300px;
+  left: 50px;
+  bottom: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+section.servicos .mundo img.caminhos.eua {
+  width: 280px;
+  left: 160px;
+  bottom: 250px;
+  opacity: 0;
+  visibility: hidden;
+}
+section.servicos .mundo.ativo img.caminhos.analista {
+  opacity: 1;
+  visibility: visible;
+}
+section.servicos .mundo img.caminhos.analista {
+  width: 300px;
+  left: 110px;
+  bottom: 250px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/******************************/
+section.servicos .mundo img.mapa {
+  width: 1500px;
+  min-width: 1500px;
+  bottom: 0;
+  left: 0;
+  transition: all 0.6s ease; 
+}
+
+/* Deslocamento e Zoom para o Brasil */
+section.servicos .mundo.ativo img.mapa.brasil {
+  left: -150px;
+  transform: scale(1.2); 
+  transition: transform 1s, left 1s; 
+}
+
+/* Deslocamento e Zoom para os EUA */
+section.servicos .mundo.ativo img.mapa.eua {
+  left: 150px; 
+  transform: scale(1.8);
+  transition: transform 1s, left 1s;
+}
+
+/* Deslocamento e Zoom para o Analista */
+section.servicos .mundo.ativo img.mapa.analista {
+  top: 140px;
+  transform: scale(1.4);
+  transition: transform 1s, top 1s;
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.servicos {
+    flex-direction: column;
+    padding: 70px 30px 60px 30px;
+  }
+  section.servicos img.divisor {
+    left: -10%;
+    width: 120%;
+  }
+  section.servicos .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 0 30px 0;
+  }
+  section.servicos .titulo h1{
+    font-size: var(--f4);
+    margin-top: 25px;
+ 
+    } 
+  section.servicos .mundo {
+    width: 100%;
+    min-height: 950px;
+    margin: 0;
+  }
+  section.servicos .seletor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0px 15px 0px;
+    z-index: 4;
+  }
+  section.servicos .seletor h3 {
+    font-size: var(--f2);
+    margin: 0 0 10px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+  section.servicos .seletor .toggle {
+    width: 100%;
+    height: 100px;
+    padding: 0 10px;
+    border-radius: 15px;
+  }
+  section.servicos .seletor .toggle .parte p {
+    font-size: var(--f2);
+  }
+  section.servicos .seletor .toggle .parte img {
+    max-width: 20px;
+  }
+  /* section.servicos .seletor .toggle span {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(to right, #8F0000, #410101);
+    position: absolute;
+    left: 20px; 
+    top: 80px;
+    border-radius: 2px;
+    transition: all 0.6s;
+  } */
+  section.servicos .seletor .toggle .parte::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Inicialmente escondido */
+    height: 4px; /* Altura da barra */
+    border-radius: 2px;
+    background: linear-gradient(to right, #8F0000, #410101);
+    transition: width 0.6s ease-in-out; /* Animação suave */
+  }
+  section.servicos .mundo .texto {
+    padding: 30px 30px 30px 30px;
+    width: auto;
+    min-width: 340px;
+    right: auto;
+    left: 0;
+    height: auto;
+    border-radius: 0 0 10px 0;
+    background: linear-gradient(-90deg, #00000095, #000000be);
+    background: -webkit-linear-gradient(-90deg, #000000be, #00000095);
+    border-right: 1px solid #ffffff1e;
+    border-bottom: 1px solid #ffffff1e;
+  }
+  section.servicos .mundo .texto h2 {
+    font-size: var(--f3);
+  }
+  section.servicos .mundo .texto p {
+    margin: 5px 0 0 0;
+    width: 100%;
+    max-width: 300px;
+  }
+  section.servicos .mundo .texto .item {
+    margin: 15px 0 0 0;
+    width: 100%;
+  }
+  section.servicos .mundo .texto .itens {
+    display: block;
+    justify-content: space-between;
+    margin-top: 5px;
+    text-align: start;
+    width: 100%;
+  }
+  section.servicos .mundo .texto .descricao-final{
+    margin-top: 25px;
+  }
+  section.servicos .mundo .texto .item img {
+    max-width: 50px; 
+  }
+  section.servicos .mundo img.mapa {
+    width: 1500px;
+    min-width: 1500px;
+    bottom: -50px;
+    left: -250px;
+  }
+  section.servicos .mundo.ativo img.mapa {
+    width: 800px;
+    min-width: 800px;
+    bottom: -50px;
+    left: -30px;
+  }
+  section.servicos .mundo img.caminhos.brasil {
+    width: 230px;
+    left: 25px;
+    bottom: 40px;
+  }
+  section.servicos .mundo img.caminhos.eua {
+    width: 190px;
+    left: 60px;
+    bottom: 10px;
+  }
+  section.servicos .mundo img.caminhos.analista {
+    width: 260px;
+    left: 20px;
+    bottom: 90px;
+}
+  section.servicos .mundo.ativo img.mapa.analista {
+    top: 480px;
+}
+section.servicos .texto button {
+  padding: 10px 35px 10px 10px;
+  margin: 15px 0 0 0;
+}
+section.servicos .texto button h3 {
+  font-size: var(--f2);
+}
+section.servicos .texto button .icone {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+
+/**********************************/
+/* section.servicos .mundo .texto{
+  padding: 30px 30px 30px 30px;
+        width: auto;
+        min-width: 340px;
+        right: auto;
+        left: 0;
+        height: auto;
+        border-radius: 0 0 10px 0;
+        background: linear-gradient(-90deg, #00000095, #000000be);
+        background: -webkit-linear-gradient(-90deg, #000000be, #00000095);
+        border-right: 1px solid #ffffff1e;
+        border-bottom: 1px solid #ffffff1e;
+        bottom: 0;
+        align-items: end;
+        justify-content: end;
+        top: 10;
+}
+
+section.servicos .mundo img.caminhos.eua {
+  width: 190px;
+  left: 60px;
+  top: 90px;
+}
+section.servicos .mundo.ativo img.mapa {
+  width: 800px;
+  min-width: 1500px;
+  bottom: -50px;
+  left: -30px;
+} */
+
+}
+
+
+
+
+
+/* Estilo da barra animada */
+
+
+/* Ativo: exibe a barra completa */
+
+

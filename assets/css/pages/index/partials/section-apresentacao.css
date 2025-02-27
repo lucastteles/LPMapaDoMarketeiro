@@ -1,0 +1,193 @@
+/* 
+<section class="apresentacao"> 
+*/
+body{
+  background-color: #000;
+}
+section.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-branco);
+  background-image: url('/assets/files/images/imagemdefundoTOPOMDM.png'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 85vh;
+}
+section.apresentacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 0px 60px 60px;
+  width: 55%;
+}
+section.apresentacao .texto .tag {
+  display: flex;
+  align-items: center;
+}
+section.apresentacao .texto .tag img {
+  width: 100%;
+  max-width: 20px;
+  margin: 0 10px 0 0;
+}
+section.apresentacao .texto .tag h3 {
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+}
+section.apresentacao .texto h1 {
+  font-family: var(--bold);
+  font-family: 'Gilroy-bold', 'Times', serif;
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.1;
+  margin: 15px 0 0 0;
+  width: 100%;
+  max-width: 680px;
+}
+section.apresentacao .texto h1 span {
+  color: var(--cor-vermelho);
+}
+section.apresentacao .texto p {
+  font-family: var(--semibold);
+  font-size: var(--f4);
+  color: var(--cor-preto);
+  line-height: 1.1;
+  margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 650px;
+}
+section.apresentacao .texto p span{
+  font-family: var(--bold);
+}
+.botoes-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+section.apresentacao .texto button {
+  flex: 1; 
+}
+section.apresentacao .texto button.e-book{
+  background-color: var(--cor-branco);
+}
+
+section.apresentacao .texto button.e-book h3 {
+  color: var(--cor-preto);
+}
+section.apresentacao .texto button {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-vermelho);
+  padding: 10px 25px 10px 10px;
+  border-radius: 12px;
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+  text-align: start;
+  box-shadow: 0px 5px 6px rgba(18, 18, 18, 0.485);
+}
+section.apresentacao .texto button:hover {
+  filter: brightness(110%);
+}
+section.apresentacao .texto button h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+}
+section.apresentacao .texto button .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-branco);
+  margin: 0 10px 0 0;
+}
+section.apresentacao .texto button .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+section.apresentacao .texto button.e-book .icone {
+  background-color: transparent;
+}
+section.apresentacao .texto button.e-book .icone img {
+  max-width: 25px;
+}
+
+/* Imagem */
+section.apresentacao .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+  margin-top: 150px;
+}
+section.apresentacao .imagem img.homem {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  z-index: 2;
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #d1b589;
+  }
+  section.apresentacao .texto {
+    padding: 100px 30px 40px 30px;
+    width: 100%;
+  }
+  section.apresentacao .texto .tag img {
+    max-width: 13px;
+    margin: 0 8px 0 0;
+  }
+  section.apresentacao .texto .tag h3 {
+    font-size: var(--f1);
+  }
+  section.apresentacao .texto h1 {
+    font-size: var(--f5);
+    max-width: 300px;
+  }
+  section.apresentacao .texto p {
+    font-size: var(--f2);
+    max-width: 350px;
+  }
+  .botoes-container {
+    gap: 0px;
+    max-width: 400px;
+    flex-direction: column;
+  }
+  section.apresentacao .texto button {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+  }
+  section.apresentacao .texto button h3 {
+    font-size: var(--f2);
+  }
+  section.apresentacao .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+  }
+  section.apresentacao .imagem img.homem {
+    max-width: 400px;
+  }
+
+}
