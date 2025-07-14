@@ -9,7 +9,7 @@ section.apresentacao {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: var(--cor-branco);
+  background-color: #d1b589;
   background-image: url('/assets/files/images/imagemdefundoTOPOMDM.png'); 
   background-size: cover;
   background-position: center;
